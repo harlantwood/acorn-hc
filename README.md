@@ -32,8 +32,7 @@ Before starting up the UI development, start up a Holochain Conductor with the A
 Enter a nix shell:
 
 ```
-nix-shell --run acorn-package
-nix-shell --run acorn-hc
+nix-shell --run acorn-package && nix-shell --run acorn-hc
 ```
 
 This starts up the Conductor with a running instance of the DNA in it.
@@ -69,7 +68,7 @@ nix-shell --run acorn-fmt
 ## Releasing
 
 Edit the `version.current` of the `config.nix` file, and set it to the desired version number of the release.
-Also edit the `version` property of `dnas/projects/zomes/acorn_projects/code/Cargo.toml` and `dnas/profiles/zomes/acorn_profiles/code/Cargo.toml`, and then run `nix-shell --run acorn-package` so that the `Cargo.lock` file is updated as well. 
+Also edit the `version` property of `dnas/projects/zomes/acorn_projects/code/Cargo.toml` and `dnas/profiles/zomes/acorn_profiles/code/Cargo.toml`, and then run `nix-shell --run acorn-package` so that the `Cargo.lock` file is updated as well.
 
 > TODO: notes about CHANGELOG.md and CHANGELOG-UNRELEASED.md
 
